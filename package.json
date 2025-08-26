@@ -5,7 +5,8 @@
   "scripts": {
     "build": "npx tsc",
     "start": "node build/index.js",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\""
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "dev:build": "npx tsc && nodemon build/index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,10 @@
     "@types/multer": "^2.0.0",
     "@types/node": "^24.3.0",
     "@types/sharp": "^0.31.1",
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"
   },
   "dependencies": {

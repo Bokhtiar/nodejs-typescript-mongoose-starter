@@ -1,8 +1,8 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 import { Request, Response, NextFunction } from "express";
-import { adminAuthService } from "../../services/admin/admin.services";
-import {IAdmin, IAdminCreateOrUpdate} from '../../types/admin/admin.types'
+import { adminAuthService } from "../../services/admin/auth.services";
+import {IAdmin, IAdminCreateOrUpdate} from '../../types/admin/auth.types'
 
 /* login as a admin */
 export const login = async (
